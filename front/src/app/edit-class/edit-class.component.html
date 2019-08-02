@@ -1,0 +1,33 @@
+<h3>Edit Class</h3>
+<div [hidden]="submitted" style="width: 400px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">Class Name</label>
+      <input type="text" class="form-control" id="name" required [(ngModel)]="class.name" name="name">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Class Level</label>
+      <select class="form-control" id="level" required [(ngModel)]="class.level" name="level">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="name">Class Departement</label>
+      <select class="form-control" id="departement" required [(ngModel)]="class.departement" name="departement">
+        <option value="math">math</option>
+        <option value="info">info</option>
+        <option value="gestion">gestion</option>
+    </select>
+    </div>
+
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>
+
+<div [hidden]="!submitted">
+  <h4>You submitted successfully!</h4>
+</div>

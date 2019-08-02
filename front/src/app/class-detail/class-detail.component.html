@@ -1,0 +1,18 @@
+<h2>Class Details</h2> 
+
+<hr/>
+<div *ngIf="class">
+  <div>
+    <label><b>Class Name: </b></label> {{class.name}}
+  </div>
+  <div>
+    <label><b>Class Level: </b></label> {{class.level}}
+  </div>
+  <div>
+    <label><b>Class Departement: </b></label> {{class.departement}}
+  </div>  
+</div>
+
+<br>
+<br>
+<button (click)="list()" class="btn btn-primary">Back to Class List</button><br>
